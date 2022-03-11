@@ -15,23 +15,24 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:paddingTop="20dp">
+        android:layout_centerInParent="true">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="180dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Login"
-                android:textSize="45sp"
-                android:textStyle="bold">
+                android:textColor="@color/text_color"
+                android:textSize="37dp">
 
             </TextView>
 
@@ -39,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="E-Mail"
+                android:text="E-mail"
                 android:textSize="16sp">
 
             </TextView>
@@ -50,14 +51,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Your email or phone"
-                >
+                android:hint="Your email or phone">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:paddingLeft="20dp"
-                    android:background="@drawable/bg_custom">
+                    android:background="@drawable/bg_custom"
+                    android:paddingLeft="20dp">
 
                 </EditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -82,9 +82,9 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:paddingLeft="20dp"
                     android:background="@drawable/bg_custom"
-                    android:inputType="textPassword">
+                    android:inputType="textPassword"
+                    android:paddingLeft="20dp">
 
                 </EditText>
             </com.google.android.material.textfield.TextInputLayout>
@@ -102,10 +102,10 @@
 
             <Button
                 android:id="@+id/button_veri"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                android:layout_width="248dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/bg_button"
                 android:text="LOGIN"
                 android:textColor="@color/white">
@@ -116,6 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="28dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -135,8 +136,7 @@
                     android:layout_marginTop="10dp"
                     android:text=" Sign Up"
                     android:textColor="@color/orange"
-                    android:textSize="16dp"
-                    android:textStyle="bold">
+                    android:textSize="16dp">
 
                 </TextView>
 
@@ -146,7 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="47dp"
                 android:weightSum="12">
 
                 <View
@@ -154,7 +154,7 @@
                     android:layout_height="1dp"
                     android:layout_gravity="center"
                     android:layout_weight="5"
-                    android:background="@color/black">
+                    android:background="#b3b3b3">
 
                 </View>
 
@@ -164,9 +164,8 @@
                     android:layout_weight="2"
                     android:text="Sign in with"
                     android:textAlignment="center"
-                    android:textSize="20sp"
-
-                    >
+                    android:textColor="@color/text_color"
+                    android:textSize="20sp">
 
                 </TextView>
 
@@ -175,7 +174,7 @@
                     android:layout_height="1dp"
                     android:layout_gravity="center"
                     android:layout_weight="5"
-                    android:background="@color/black">
+                    android:background="#b3b3b3">
 
                 </View>
 
@@ -183,32 +182,34 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="30dp"
                 android:orientation="horizontal"
                 android:weightSum="12">
 
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="145dp"
+                    android:layout_height="57dp"
                     android:layout_gravity="center"
                     android:background="@drawable/bg_button2"
                     android:drawableLeft="@drawable/ic_fb"
-                    android:paddingRight="20dp"
+                    android:padding="11dp"
                     android:text="FACEBOOK"
+                    android:textAlignment="center"
                     android:textColor="@color/black">
 
                 </Button>
 
                 <Button
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="145dp"
+                    android:layout_height="57dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="30dp"
                     android:background="@drawable/bg_button2"
                     android:drawableLeft="@drawable/ic_gg"
-                    android:paddingRight="20dp"
+                    android:padding="11dp"
                     android:text="GOOGLE"
                     android:textAlignment="center"
                     android:textColor="@color/black">

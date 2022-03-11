@@ -34,10 +34,10 @@
                 style="@style/Button"
                 android:layout_width="55dp"
                 android:layout_height="32dp"
+                android:onClick="nextWelcome"
                 android:text="Skip"
                 android:textAllCaps="false"
-                android:visibility="visible"
-                android:onClick="nextWelcome"/>
+                android:visibility="visible" />
 
             <TextView
                 style="@style/viewParent.headerText.NoMode"
@@ -120,7 +120,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:paddingTop="15px"
+                            android:paddingTop="10px"
                             android:text="Facebook"
                             android:textAllCaps="true"
                             android:textColor="@color/black"
@@ -144,7 +144,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
-                            android:paddingTop="15px"
+                            android:paddingTop="10px"
                             android:text="google"
                             android:textAllCaps="true"
                             android:textColor="@color/black"
@@ -162,13 +162,14 @@
                     android:padding="10dp">
 
                     <TextView
+                        android:id="@+id/button_login3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:text="Start with email or phone"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textColor="@color/white"
-                        android:layout_gravity="center"
                         android:textSize="13dp" />
 
 
