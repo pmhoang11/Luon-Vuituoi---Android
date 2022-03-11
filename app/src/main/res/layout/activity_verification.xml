@@ -9,6 +9,7 @@
     android:background="@drawable/ic_bg_login"
     android:focusableInTouchMode="true"
     android:gravity="center">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,47 +24,51 @@
             android:layout_height="80dp"
             android:orientation="vertical"
             android:padding="20dp">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Verification Code"
-                android:textStyle="bold"
-                android:textSize="44sp"
-                android:textColor="@color/black"
                 android:textAlignment="textStart"
-                >
+                android:textColor="@color/black"
+                android:textSize="44sp"
+                android:textStyle="bold">
 
             </TextView>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please type the verification code sent to prelookstudio@gmail.com"
-                android:textSize="20dp"
                 android:layout_marginTop="10dp"
+                android:text="Please type the verification code sent to prelookstudio@gmail.com"
                 android:textAlignment="textStart"
-                >
+                android:textSize="20dp">
 
             </TextView>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputLayout
 
                     android:id="@+id/textInputLayout3"
                     android:layout_width="80dp"
-                    android:layout_height="80dp"
+
+                    android:layout_height="90dp"
                     android:layout_marginTop="10dp">
 
                     <EditText
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:background="@drawable/bg_custom"
                         android:layout_gravity="center"
+                        android:background="@drawable/bg_custom"
+                        android:textSize="40sp"
+
+                        android:paddingLeft="30dp"
                         android:inputType="number"
                         android:maxLength="1">
 
@@ -74,15 +79,18 @@
 
                     android:id="@+id/textInputLayout4"
                     android:layout_width="80dp"
-                    android:layout_height="80dp"
-
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp">
 
                     <EditText
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:background="@drawable/bg_custom"
                         android:layout_gravity="center"
+                        android:textSize="40sp"
+
+                        android:paddingLeft="30dp"
+                        android:background="@drawable/bg_custom"
                         android:inputType="number"
                         android:maxLength="1">
 
@@ -93,14 +101,18 @@
 
                     android:id="@+id/textInputLayout5"
                     android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp">
 
                     <EditText
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:background="@drawable/bg_custom"
                         android:layout_gravity="center"
+                        android:textSize="40sp"
+
+                        android:paddingLeft="30dp"
+                        android:background="@drawable/bg_custom"
                         android:inputType="number"
                         android:maxLength="1">
 
@@ -111,16 +123,19 @@
 
                     android:id="@+id/textInputLayout2"
                     android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp">
 
                     <EditText
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:textSize="40sp"
+                        android:paddingLeft="30dp"
                         android:background="@drawable/bg_custom"
                         android:inputType="number"
-                        android:maxLength="1"
-                        android:layout_gravity="center">
+                        android:maxLength="1">
 
                     </EditText>
                 </com.google.android.material.textfield.TextInputLayout>
@@ -130,27 +145,26 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="I don't recevie a code!"
-                    android:textColor="@color/black"
                     android:textAlignment="center"
-                    android:textSize="16sp"
-                    ></TextView>
+                    android:textColor="@color/black"
+                    android:textSize="16sp"></TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" Please resend"
-                    android:textColor="@color/orange"
                     android:textAlignment="center"
+                    android:textColor="@color/orange"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    >
+                    android:textStyle="bold">
 
                 </TextView>
 
