@@ -4,71 +4,38 @@ android:orientation="vertical"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="#a6dfdfdf"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
 xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <EditText
-            android:background="@drawable/bg_custom"
-            android:id="@+id/full_name_change"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="10dp"
-            android:hint="your full name"
-            ></EditText>
-        <EditText
-            android:id="@+id/change_email"
-            android:background="@drawable/bg_custom"
-            android:layout_width="match_parent"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="10dp"
-            android:hint="your email"
-            ></EditText>
-        <EditText
-            android:background="@drawable/bg_custom"
-            android:id="@+id/phone_number_change"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:hint="your phone number"
-            android:paddingLeft="10dp"
-            ></EditText>
-        <LinearLayout
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:weightSum="2"
-            >
-            <Button
-                android:id="@+id/btn_exit"
-                android:text="EXIT"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:background="@drawable/bg_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                >
 
-            </Button>
-            <Button
-                android:id="@+id/btn_save"
-                android:text="SAVE"
-                android:textAlignment="center"
-                android:layout_marginLeft="20dp"
-                android:textColor="@color/white"
-                android:background="@drawable/bg_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                >
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:focusable="false"
+                    android:id="@+id/show_fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp">
 
-            </Button>
+                </EditText>
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:id="@+id/show_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp">
 
-        </LinearLayout>
+                </EditText>
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:focusable="true"
+                    android:id="@+id/show_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="20dp">
+
+                </EditText>
+
 
 </LinearLayout>

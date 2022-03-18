@@ -21,9 +21,7 @@
             android:exported="false" />
         <activity
             android:name=".profile"
-            android:exported="false"
-            android:label="@string/title_activity_profile"
-            android:theme="@style/NoActionBar" />
+            android:exported="false" />
         <activity
             android:name=".verification"
             android:exported="false" />
@@ -35,6 +33,12 @@
             android:exported="false" />
         <activity
             android:name=".OnBoardingOneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoardingTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoardingThreeActivity"
             android:exported="false" />
         <activity
             android:name=".Splash"

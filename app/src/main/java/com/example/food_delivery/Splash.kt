@@ -20,7 +20,7 @@ class Splash : AppCompatActivity() {
 
 
         val splashScreenTimeOut  = 4000;
-        val intent = Intent(this@Splash,welcome::class.java)
+        val intent = Intent(this@Splash,OnBoardingOneActivity::class.java)
         Handler().postDelayed({
             startActivity(intent)
             finish()
