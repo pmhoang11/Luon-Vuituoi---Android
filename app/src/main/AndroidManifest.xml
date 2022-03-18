@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".OnBoardingTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoardingThreeActivity"
+            android:exported="false" />
+        <activity
             android:name=".verification"
             android:exported="false" />
         <activity

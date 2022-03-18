@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OnBoardingOneActivity"
+    tools:context=".OnBoardingTwoActivity"
     android:background="@color/white"
     android:focusableInTouchMode="true">
 
@@ -35,22 +35,22 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="24dp"
                     android:paddingTop="73dp"
-                    android:src="@drawable/human" />
+                    android:src="@drawable/dimsum" />
 
                 <RelativeLayout
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:layout_marginLeft="250dp"
                     android:layout_marginTop="70dp"
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:src="@drawable/star_buck" />
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/potato" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                 <RelativeLayout
                     android:layout_width="46dp"
                     android:layout_height="46dp"
-                    android:layout_marginLeft="180dp"
+                    android:layout_marginLeft="200dp"
                     android:layout_marginTop="330dp"
                     android:gravity="center">
 
@@ -70,7 +70,7 @@
                         android:layout_height="30dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
-                        android:src="@drawable/jimmyjohns" />
+                        android:src="@drawable/mask_group_2" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -90,7 +90,7 @@
                         android:layout_height="40dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginTop="8dp"
-                        android:src="@drawable/kfc" />
+                        android:src="@drawable/mask_group1" />
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -99,43 +99,44 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_width="38dp"
-                    android:layout_height="38dp"
-                    android:layout_marginLeft="80dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="70dp"
                     android:layout_marginTop="175dp"
                     android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="31dp"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="3.6dp"
-                        android:layout_marginTop="2dp"
-                        android:src="@drawable/pizzahut" />
-
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/layer" />
+                        android:src="@drawable/union" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7.4dp"
+                        android:layout_marginTop="8.2dp"
+                        android:src="@drawable/pizza" />
+
+
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_width="56dp"
-                    android:layout_height="56dp"
-                    android:layout_marginLeft="280dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="260dp"
                     android:layout_marginTop="270dp"
                     android:gravity="center">
-
+                    <ImageView
+                        android:layout_width="220dp"
+                        android:layout_height="220dp"
+                        android:src="@drawable/union" />
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:src="@drawable/burgerking" />
+                        android:layout_marginLeft="19dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/mask_group_3" />
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/layer" />
+
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -150,14 +151,15 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_line" />
+                    android:layout_marginTop="-2dp"
+                    android:src="@drawable/ic_ellipse" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="-2dp"
-                    android:src="@drawable/ic_ellipse" />
+
+                    android:src="@drawable/ic_line" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -178,7 +180,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Browse your  menu\nand order directly"
+                    android:text="Even to space with"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="36dp" />
