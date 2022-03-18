@@ -180,7 +180,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Even to space with"
+                    android:text="Even to space with\nus! Together"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="36dp" />

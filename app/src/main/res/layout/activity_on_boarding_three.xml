@@ -183,7 +183,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Pick up delivery at"
+                    android:text="Pick up delivery at\nyour door"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="36dp" />
