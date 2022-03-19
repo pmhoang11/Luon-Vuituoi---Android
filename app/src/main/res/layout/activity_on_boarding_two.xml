@@ -41,15 +41,17 @@
             android:src="@drawable/dimsum" />
 
         <RelativeLayout
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginLeft="250dp"
             android:layout_marginTop="70dp"
             android:gravity="center">
 
           <ImageView
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_marginLeft="5dp"
+              android:layout_marginTop="5dp"
               android:src="@drawable/potato" />
 
           <ImageView
@@ -180,7 +182,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Even to space with"
+            android:text="Even to space with\nus! Together"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="36dp" />
