@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".welcome"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
             android:name=".verification"
             android:exported="false" />
         <activity
@@ -29,7 +35,13 @@
             android:name=".OnBoardingOneActivity"
             android:exported="false" />
         <activity
-            android:name=".welcome"
+            android:name=".OnBoardingTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoardingThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
