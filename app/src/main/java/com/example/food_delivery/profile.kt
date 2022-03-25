@@ -16,8 +16,11 @@ class profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
         val email: String? = intent.getStringExtra("email")
-        val password: String? = intent.getStringExtra("password")
+        val name: String? = intent.getStringExtra("fullname")
         email_show.setText(email)
+        full_name_show.setText(name)
+        full_name_view.setText(name)
+        phone_number_show.setText(Data_Store.USER_PHONE_KEY)
 
         //edit full name
         full_name_show.setOnClickListener {
