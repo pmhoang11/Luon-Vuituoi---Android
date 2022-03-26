@@ -25,7 +25,7 @@ class profile : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
         binding.user = User(Data_Store.USER_NAME_KEY, Data_Store.USER_EMAIL_KEY, Data_Store.USER_PHONE_KEY)
         viewModel = ViewModelProvider(this).get(profile_view_model::class.java)
-        binding.editProfile.setOnClickListener({ showDialog() })
+        binding.editProfile.setOnClickListener { showDialog() }
 //        setContentView(R.layout.activity_profile)
 //        val email: String? = intent.getStringExtra("email")
 //        val name: String? = intent.getStringExtra("fullname")
@@ -120,23 +120,20 @@ class profile : AppCompatActivity() {
             .setTitle("Change Information")
 
         builder.apply {
-            setPositiveButton("SAVE", DialogInterface.OnClickListener { dialogInterface: DialogInterface?, id: Int ->
+            setPositiveButton("SAVE", DialogInterface.OnClickListener { _: DialogInterface?, _: Int ->
                 viewModel.checkEmail(textEmail.text.toString())
-                listenerSuccessEvent(textName.text.toString(),
-                    textEmail.text.toString(),
-                    textPhoneNumber.text.toString()
-                )
+                listenerSuccessEvent(textName.text.toString(), textEmail.text.toString(), textPhoneNumber.text.toString())
                 listenerErrorEvent()
             })
-            setNegativeButton("CANEL", DialogInterface.OnClickListener { dialogInterface: DialogInterface?, id: Int ->
+            setNegativeButton("CANCEL", DialogInterface.OnClickListener { _: DialogInterface?, _: Int ->
 
             })
         }
         builder.show()
     }
     private fun listenerSuccessEvent(name: String, email:String, phone:String) {
-        viewModel.isSuccessEvent.observe(this) { isSucess ->
-            if (isSucess) {
+        viewModel.isSuccessEvent.observe(this) { isSuccess ->
+            if (isSuccess) {
                 binding.user = User(name, email, phone)
             }
         }

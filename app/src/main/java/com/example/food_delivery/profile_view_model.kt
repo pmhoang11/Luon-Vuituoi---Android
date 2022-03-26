@@ -21,15 +21,15 @@ class profile_view_model: ViewModel() {
         }
         _isSuccessEvent.postValue(true)
     }
-    fun checkEmailAndPassword (email:String,password:String){
+    fun checkEmailAndPassword (email:String,phoneNumber:String){
         val isValidEmail = isEmailValid(email)
-        val isValidPhoneNumber= isPhoneNumberValid(password)
+        val isValidPhoneNumber= isPhoneNumberValid(phoneNumber)
         if(!isValidEmail){
             _isErrorEvent.postValue("Ivalid email")
             return
         }
         if(!isValidPhoneNumber){
-            _isErrorEvent.postValue("Ivalid password")
+            _isErrorEvent.postValue("Ivalid phone number")
             return
         }
         return _isSuccessEvent.postValue(true)
@@ -39,7 +39,7 @@ class profile_view_model: ViewModel() {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
-    private fun isPhoneNumberValid(password: String):Boolean{
-        return password.length>5 && password.length<10
+    private fun isPhoneNumberValid(phoneNumber: String):Boolean{
+        return phoneNumber.toInt() in 100000000..9999999999
     }
 }
