@@ -37,15 +37,13 @@ class Login : AppCompatActivity() {
     private fun listenerSuccessEvent(){
         viewmodel.isSuccessEvent.observe(this){
             if(it){
-                val email = binding.email.text.toString().trim()
-               // val password = binding.password.text.toString().trim()
-                val name = Data_Store.USER_NAME_KEY
                 if(check()) {
                     Toast.makeText(this, "Successful login !", Toast.LENGTH_SHORT).show()
                     val intent: Intent = Intent(this, profile::class.java)
-                    intent.putExtra("email", email)
-                    intent.putExtra("fullname", name)
                     startActivity(intent)
+                }
+                else {
+                    Toast.makeText(this, "Email and password incorrect !", Toast.LENGTH_SHORT).show()
                 }
 
             }
