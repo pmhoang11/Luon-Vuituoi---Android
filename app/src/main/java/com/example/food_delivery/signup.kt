@@ -4,23 +4,61 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
+import com.example.food_delivery.databinding.ActivityLoginBinding
+import com.example.food_delivery.databinding.ActivitySignupBinding
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_signup.*
 import kotlinx.android.synthetic.main.activity_welcome.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class signup : AppCompatActivity() {
+    private lateinit var binding : ActivitySignupBinding
+    private lateinit var ViewModel: signup_view_model
+    private lateinit var userManager: Data_Store
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_signup)
-        button_login2.setOnClickListener {
-            val intent: Intent = Intent(this,Login::class.java)
+
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_signup)
+        ViewModel= ViewModelProvider(this).get(signup_view_model::class.java)
+        userManager = Data_Store(this)
+        binding.buttonLogin2.setOnClickListener{
+            val intent = Intent(this,Login::class.java)
             startActivity(intent)
         }
+        binding.buttonVeri2.setOnClickListener{
+            val email=binding.emailSignup.text.toString().trim()
+            val password=binding.passwordSignup.text.toString().trim()
+            ViewModel.checkEmailAndPassword(email,password)
+        }
+        listennerSuccessEvent()
+        listennerErrorEvent()
 
-        button_veri2.setOnClickListener {
-            val intent: Intent = Intent(this, verification::class.java)
-            startActivity(intent)
-
+    }
+    private fun listennerSuccessEvent(){
+        ViewModel.isSuccessEvent.observe(this){ isSuccess->
+            if(isSuccess){
+                val intent=Intent(this, Login::class.java)
+                CoroutineScope(Dispatchers.IO).launch {
+                    userManager.changedataUser(
+                        binding.nameSignup.text.toString().trim(),
+                        binding.emailSignup.text.toString().trim(),
+                        binding.passwordSignup.text.toString().trim()
+                    )
+                }
+                startActivity(intent)
+            }
         }
     }
+    private fun listennerErrorEvent(){
+        ViewModel.isErrorEvent.observe(this){errMsg ->
+            Toast.makeText( this,errMsg, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
 }
