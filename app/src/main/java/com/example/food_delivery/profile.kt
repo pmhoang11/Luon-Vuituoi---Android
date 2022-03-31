@@ -120,15 +120,12 @@ class profile : AppCompatActivity() {
             .setTitle("Change Information")
 
         builder.apply {
-            setPositiveButton("SAVE", DialogInterface.OnClickListener { dialogInterface: DialogInterface?, id: Int ->
+            setPositiveButton("SAVE", DialogInterface.OnClickListener { _: DialogInterface?, _: Int ->
                 viewModel.checkEmail(textEmail.text.toString())
-                listenerSuccessEvent(textName.text.toString(),
-                    textEmail.text.toString(),
-                    textPhoneNumber.text.toString()
-                )
+                listenerSuccessEvent(textName.text.toString(), textEmail.text.toString(), textPhoneNumber.text.toString())
                 listenerErrorEvent()
             })
-            setNegativeButton("CANEL", DialogInterface.OnClickListener { dialogInterface: DialogInterface?, id: Int ->
+            setNegativeButton("CANCEL", DialogInterface.OnClickListener { _: DialogInterface?, _: Int ->
 
             })
         }
