@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.food_delivery.databinding.ActivityLoginBinding
@@ -50,13 +51,17 @@ class signup : AppCompatActivity() {
                         binding.passwordSignup.text.toString().trim()
                     )
                 }
+                Toast.makeText( this,"Successful", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
             }
         }
     }
     private fun listennerErrorEvent(){
         ViewModel.isErrorEvent.observe(this){errMsg ->
-            Toast.makeText( this,errMsg, Toast.LENGTH_SHORT).show()
+            val dialog = AlertDialog.Builder(this)
+            dialog.setTitle("Invalid information")
+            dialog.setMessage(errMsg)
+            dialog.show()
         }
     }
 
