@@ -17,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
+            android:name=".RestaurantListActivity"
+            android:exported="false" >
+        </activity>
+        <activity
             android:name=".welcome"
             android:exported="false" />
         <activity
