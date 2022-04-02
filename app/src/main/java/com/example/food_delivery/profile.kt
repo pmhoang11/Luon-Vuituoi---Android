@@ -26,6 +26,11 @@ class profile : AppCompatActivity() {
         binding.user = User(Data_Store.USER_NAME_KEY, Data_Store.USER_EMAIL_KEY, Data_Store.USER_PHONE_KEY)
         viewModel = ViewModelProvider(this).get(profile_view_model::class.java)
         binding.editProfile.setOnClickListener { showDialog() }
+        binding.back.setOnClickListener { finish() }
+        binding.next.setOnClickListener {
+            val intent = Intent(this,RestaurantListActivity::class.java)
+            startActivity(intent)
+        }
 //        setContentView(R.layout.activity_profile)
 //        val email: String? = intent.getStringExtra("email")
 //        val name: String? = intent.getStringExtra("fullname")

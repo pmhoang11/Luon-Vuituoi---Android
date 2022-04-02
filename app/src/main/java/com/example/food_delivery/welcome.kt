@@ -17,7 +17,7 @@ class welcome : AppCompatActivity() {
         }
 
         button_login3.setOnClickListener {
-            val intent: Intent = Intent(this,Login::class.java)
+            val intent: Intent = Intent(this,signup::class.java)
             startActivity(intent)
         }
     }
