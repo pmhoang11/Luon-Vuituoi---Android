@@ -41,5 +41,33 @@
         android:id="@+id/onBoardingThreeFragment"
         android:name="com.example.food_delivery.OnBoardingThreeFragment"
         android:label="OnBoardingThreeFragment"
-        tools:layout="@layout/fragment_on_boarding_three"/>
+        tools:layout="@layout/fragment_on_boarding_three">
+        <action
+            android:id="@+id/action_onBoardingThreeFragment_to_welcomFragment"
+            app:destination="@id/welcomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomFragment"
+        android:name="com.example.food_delivery.WelcomFragment"
+        android:label="WelcomFragment"
+        tools:layout="@layout/fragment_welcom">
+        <action
+            android:id="@+id/action_welcomFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.food_delivery.SignUpFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.food_delivery.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_up"/>
+
 </navigation>
