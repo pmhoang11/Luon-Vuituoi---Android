@@ -40,7 +40,7 @@ class WelcomFragment : Fragment() {
         }
         binding.buttonSignin.setOnClickListener {
             var controler = findNavController()
-            controler.navigate(R.id.action_welcomFragment_to_signUpFragment)
+            controler.navigate(R.id.action_welcomFragment_to_signInFragment)
         }
     }
 

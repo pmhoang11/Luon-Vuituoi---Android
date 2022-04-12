@@ -32,17 +32,19 @@ class SignInFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_login)
+//        binding = DataBindingUtil.setContentView(this,R.layout.activity_login)
         ViewModel = ViewModelProvider(this).get(login_view_model::class.java)
 
         binding.buttonSignup.setOnClickListener {
-            val intent: Intent = Intent(this, signup::class.java)
-            startActivity(intent)
+//            val intent: Intent = Intent(this, signup::class.java)
+//            startActivity(intent)
+            val controller = findNavController()
+            controller.navigate(R.id.action_signInFragment_to_signUpFragment)
         }
         binding.buttonVeri.setOnClickListener{
             val email=binding.email.text.toString().trim()
             val password=binding.password.text.toString().trim()
-            viewmodel.checkEmailAndPassword(email,password)
+            ViewModel.checkEmailAndPassword(email,password)
             val controller = findNavController()
             controller.navigate(R.id.action_signInFragment_to_homeScreenFragment)
         }
@@ -50,14 +52,14 @@ class SignInFragment : Fragment() {
         listenerSuccessEvent()
     }
     private fun listenerSuccessEvent(){
-        ViewModel.isSuccessEvent.observe(this){
+        ViewModel.isSuccessEvent.observe(viewLifecycleOwner){
             if(it){
                 if(check()) {
-                    Toast.makeText(this, "Successful login !", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, "Successful login !", Toast.LENGTH_SHORT).show()
 
                 }
                 else {
-                    Toast.makeText(this, "Email and password incorrect !", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, "Email and password incorrect !", Toast.LENGTH_SHORT).show()
                 }
 
             }
@@ -80,8 +82,8 @@ class SignInFragment : Fragment() {
     }
 
     private fun listenerErrorEvent(){
-        ViewModel.isErrorEvent.observe(this){
-            Toast.makeText(this,it, Toast.LENGTH_SHORT).show()
+        ViewModel.isErrorEvent.observe(viewLifecycleOwner){
+            Toast.makeText(activity,it, Toast.LENGTH_SHORT).show()
         }
     }
 

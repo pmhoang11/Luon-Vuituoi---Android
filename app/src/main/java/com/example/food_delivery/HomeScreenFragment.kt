@@ -29,37 +29,37 @@ class HomeScreenFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.profilebtn.setOnClickListener{
-            val controller = findNavController()
-            controller.navigate(R.id.action_homeScreenFragment_to_profileFragment)
-            binding = DataBindingUtil.setContentView(this, R.layout.activity_restaurant_list)
-
-            //binding.back.setOnClickListener { finish() }
-
-            val data = DataStore.getDataSet()
-            val adapter = RestaurantAdapter(data)
-            val lm = LinearLayoutManager(this)
-
-            //chuyển đổi linear, grid
-            binding.rvRestaurant.layoutManager = lm
-            binding.rvRestaurant.adapter = adapter
-            binding.linearView.setOnClickListener {
-                binding.linearView.setBackgroundResource(R.drawable.bg_switch_item)
-                binding.gridView.setBackgroundResource(R.drawable.bg_switch_grid)
-                val lm = LinearLayoutManager(this)
-                binding.rvRestaurant.layoutManager = lm
-                binding.rvRestaurant.adapter = adapter
-            }
-            binding.gridView.setOnClickListener {
-                binding.linearView.setBackgroundResource(R.drawable.bg_switch_linear)
-                binding.gridView.setBackgroundResource(R.drawable.bg_switch_item)
-                val lm = GridLayoutManager(this, 2)
-                binding.rvRestaurant.layoutManager = lm
-                binding.rvRestaurant.adapter = adapter
-            }
-        }
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//        binding.profilebtn.setOnClickListener{
+//            val controller = findNavController()
+//            controller.navigate(R.id.action_homeScreenFragment_to_profileFragment)
+//            binding = DataBindingUtil.setContentView(this, R.layout.activity_restaurant_list)
+//
+//            //binding.back.setOnClickListener { finish() }
+//
+//            val data = DataStore.getDataSet()
+//            val adapter = RestaurantAdapter(data)
+//            val lm = LinearLayoutManager(this)
+//
+//            //chuyển đổi linear, grid
+//            binding.rvRestaurant.layoutManager = lm
+//            binding.rvRestaurant.adapter = adapter
+//            binding.linearView.setOnClickListener {
+//                binding.linearView.setBackgroundResource(R.drawable.bg_switch_item)
+//                binding.gridView.setBackgroundResource(R.drawable.bg_switch_grid)
+//                val lm = LinearLayoutManager(this)
+//                binding.rvRestaurant.layoutManager = lm
+//                binding.rvRestaurant.adapter = adapter
+//            }
+//            binding.gridView.setOnClickListener {
+//                binding.linearView.setBackgroundResource(R.drawable.bg_switch_linear)
+//                binding.gridView.setBackgroundResource(R.drawable.bg_switch_item)
+//                val lm = GridLayoutManager(this, 2)
+//                binding.rvRestaurant.layoutManager = lm
+//                binding.rvRestaurant.adapter = adapter
+//            }
+//        }
+//    }
 
 }

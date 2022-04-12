@@ -27,3 +27,14 @@ class Data_Store (val context: Context) {
         }
     }
 }
+
+class _DataStore private constructor(var name : String, var email: String, var password: String){
+    companion object{
+        private var instance : User? = null
+        operator fun invoke(fullName : String, email: String, password: String):User = synchronized(this){
+            if(instance == null || (!fullName.equals("") && !email.equals("") && !password.equals("")))
+                instance = User(fullName,email,password)
+            return instance as User
+        }
+    }
+}

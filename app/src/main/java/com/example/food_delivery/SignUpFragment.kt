@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.datastore.dataStore
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
 import androidx.navigation.fragment.findNavController
 import com.example.food_delivery.databinding.FragmentSignUpBinding
 import com.example.food_delivery.databinding.FragmentWelcomBinding
@@ -38,40 +40,46 @@ class SignUpFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         ViewModel= ViewModelProvider(this).get(signup_view_model::class.java)
 //        userManager = Data_Store(this)
 
         binding.buttonLogin2.setOnClickListener {
-            var controler = findNavController()
+            val controler = findNavController()
             controler.navigate(R.id.action_signUpFragment_to_signInFragment)
         }
         binding.buttonVeri2.setOnClickListener {
             val email=binding.emailSignup.text.toString().trim()
             val password=binding.passwordSignup.text.toString().trim()
             ViewModel.checkEmailAndPassword(email,password)
+
         }
-        listennerSuccessEvent()
-        listennerErrorEvent()
+        listenerSuccessEvent()
+        listenerErrorEvent()
 
     }
 
-    private fun listennerSuccessEvent(){
-        ViewModel.isSuccessEvent.observe(viewLifecycleOwner){ isSuccess->
-            if(isSuccess){
-                CoroutineScope(Dispatchers.IO).launch {
-                    userManager.changedataUser(
-                        binding.nameSignup.text.toString().trim(),
-                        binding.emailSignup.text.toString().trim(),
-                        binding.passwordSignup.text.toString().trim()
-                    )
-                }
-//                Toast.makeText( this,"Successful", Toast.LENGTH_SHORT).show()
+    private fun listenerSuccessEvent(){
+        ViewModel.isSuccessEvent.observe(viewLifecycleOwner){
+            if(it){
+//                CoroutineScope(Dispatchers.IO).launch {
+//                    userManager.changedataUser(
+//                        binding.nameSignup.text.toString().trim(),
+//                        binding.emailSignup.text.toString().trim(),
+//                        binding.passwordSignup.text.toString().trim()
+//                    )
+//                }
+                _DataStore(binding.nameSignup.text.toString().trim(),
+                    binding.emailSignup.text.toString().trim(),
+                    binding.passwordSignup.text.toString().trim())
+                Toast.makeText( activity,"Successful", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
             }
         }
     }
-    private fun listennerErrorEvent(){
-        ViewModel.isErrorEvent.observe(this){errMsg ->
-            val dialog = AlertDialog.Builder(this)
+    private fun listenerErrorEvent(){
+        ViewModel.isErrorEvent.observe(viewLifecycleOwner){errMsg ->
+            val dialog = AlertDialog.Builder(requireContext())
             dialog.setTitle("Invalid information")
             dialog.setMessage(errMsg)
             dialog.show()
