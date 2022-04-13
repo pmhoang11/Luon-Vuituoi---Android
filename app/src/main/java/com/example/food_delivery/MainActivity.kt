@@ -3,9 +3,9 @@ package com.example.food_delivery
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class OnBoardingOneActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_on_boarding_one)
+        setContentView(R.layout.activity_main)
     }
 }

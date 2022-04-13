@@ -10,17 +10,14 @@ class welcome : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
-        button_skip.setOnClickListener {
-            val intent: Intent = Intent(this,OnBoardingOneActivity::class.java)
-            startActivity(intent)
-        }
+
         button_Signin.setOnClickListener {
             val intent: Intent = Intent(this,Login::class.java)
             startActivity(intent)
         }
 
         button_login3.setOnClickListener {
-            val intent: Intent = Intent(this,Login::class.java)
+            val intent: Intent = Intent(this,signup::class.java)
             startActivity(intent)
         }
     }

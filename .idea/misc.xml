@@ -16,11 +16,23 @@
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/drawable/ic_fb.xml" value="0.2265" />
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/drawable/ic_line.xml" value="0.1955" />
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/drawable/mask_group.xml" value="0.176" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/drawable/otp_unselected.xml" value="0.2265" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_main.xml" value="0.18432971014492755" />
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding2.xml" value="0.22826086956521738" />
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_one.xml" value="0.4" />
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_three.xml" value="0.4" />
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_two.xml" value="0.4" />
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_two2.xml" value="0.2" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_restaurant_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/chage_info_dialog.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/dialog_email.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/fragment_home_screen.xml" value="0.264" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/fragment_sign_in.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/item_restaurant.xml" value="0.25416666666666665" />
+        <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/layout/item_view_restaurant_clicked.xml" value="0.25416666666666665" />
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2265" />
         <entry key="..\:/GitHub/LuonVuituoi-Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2265" />
         <entry key="..\:/NAMTU_KI2/ANDROID/BT01/GIT/LuonVuituoi-Android/app/src/main/res/drawable/bg_button.xml" value="0.3175" />
@@ -33,6 +45,41 @@
         <entry key="..\:/NAMTU_KI2/ANDROID/BT01/GIT/LuonVuituoi-Android/app/src/main/res/layout/activity_signup.xml" value="0.33" />
         <entry key="..\:/NAMTU_KI2/ANDROID/BT01/GIT/LuonVuituoi-Android/app/src/main/res/layout/activity_verification.xml" value="0.33" />
         <entry key="..\:/NAMTU_KI2/ANDROID/BT01/GIT/LuonVuituoi-Android/app/src/main/res/layout/activity_welcome.xml" value="0.33" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/drawable-v24/ic_logo3.xml" value="0.3675" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/drawable-v24/ic_name.xml" value="0.3675" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/drawable/bg_button.xml" value="0.213" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/drawable/bg_button2.xml" value="0.213" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/drawable/bg_custom.xml" value="0.213" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/layout/activity_login.xml" value="0.31657608695652173" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/layout/activity_main.xml" value="0.31657608695652173" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/layout/activity_profile.xml" value="0.31657608695652173" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/layout/activity_splash.xml" value="0.17831813576494426" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT02/LuonVuituoi-Android/LuonVuituoi-Android/app/src/main/res/layout/chage_info_dialog.xml" value="0.33" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT03/2/LuonVuituoi-Android/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT03/2/LuonVuituoi-Android/app/src/main/res/layout/activity_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT03/2/LuonVuituoi-Android/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT03/2/LuonVuituoi-Android/app/src/main/res/layout/activity_splash.xml" value="0.24320652173913043" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT03/2/LuonVuituoi-Android/app/src/main/res/layout/chage_info_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT03/2/LuonVuituoi-Android/app/src/main/res/layout/dialog_email.xml" value="0.36666666666666664" />
+        <entry key="..\:/NAMTU_KI2/ANDROID/BT03/2/LuonVuituoi-Android/app/src/main/res/layout/dialog_namefull.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/drawable/bg_cover_photo.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/drawable/border_shadow.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/drawable/ic_profile_bg.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_login.xml" value="0.31657608695652173" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding2.xml" value="0.31657608695652173" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_one.xml" value="0.31657608695652173" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_three.xml" value="0.31657608695652173" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_two.xml" value="0.31657608695652173" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_two2.xml" value="0.31657608695652173" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_profile.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_splash.xml" value="0.31657608695652173" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_verification.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/activity_welcome.xml" value="0.31657608695652173" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/chage_info_dialog.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/dialog_email.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/dialog_fullname.xml" value="0.3038949275362319" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/dialog_namefull.xml" value="0.26979166666666665" />
+        <entry key="..\:/Users/Admin/Documents/GitHub/LuonVuituoi-Android/app/src/main/res/layout/dialog_phone.xml" value="0.26979166666666665" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/Food Delivery/androidstudio/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/Food Delivery/androidstudio/app/src/main/res/drawable/brand.xml" value="0.198" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/Food Delivery/androidstudio/app/src/main/res/drawable/button.xml" value="0.1" />
@@ -52,14 +99,50 @@
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/Food Delivery/androidstudio/app/src/main/res/layout/activity_welcome.xml" value="0.5507936507936508" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/Food Delivery/androidstudio/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.143" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/Food Delivery/androidstudio/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.143" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable-v24/bg_rectangle.xml" value="0.3675" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/bg_button.xml" value="0.3675" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/bg_button2.xml" value="0.204" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/bg_cover_photo.xml" value="0.3675" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/bg_custom.xml" value="0.366" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/bg_rectangle.xml" value="0.282" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/bg_switch.xml" value="0.3675" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/bg_switch_grid.xml" value="0.366" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/bg_switch_item.xml" value="0.3675" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/bg_switch_linear.xml" value="0.366" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/ic_fb.xml" value="0.204" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/drawable/white.xml" value="0.366" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding2.xml" value="0.20521590423257802" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_one.xml" value="0.75" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_three.xml" value="0.3712948517940718" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_two.xml" value="0.6200227531285551" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_two2.xml" value="0.20521590423257802" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_profile.xml" value="0.29257246376811596" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_restaurant_list.xml" value="0.3009833262077811" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_signup.xml" value="0.33" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_singup.xml" value="0.33" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_splash.xml" value="0.29257246376811596" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_veri_code.xml" value="0.33" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_verification.xml" value="0.18642350557244175" />
         <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/activity_welcome.xml" value="0.5006915629322268" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/chage_info_dialog.xml" value="0.29257246376811596" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/dialog_email.xml" value="0.31068840579710144" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/fragment_on_boarding_one.xml" value="0.18802083333333333" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/fragment_on_boarding_three.xml" value="0.18802083333333333" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/fragment_on_boarding_two.xml" value="0.18802083333333333" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/fragment_splash.xml" value="0.18802083333333333" />
+        <entry key="..\:/VHH/NAM4_KI2/ADNROID/LuonVuituoi-Android/app/src/main/res/layout/item_restaurant.xml" value="0.33" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/drawable/bg_button.xml" value="0.183" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/layout/activity_on_boarding_one.xml" value="0.25" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/layout/activity_signup.xml" value="0.14945652173913043" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/layout/activity_verification.xml" value="0.14945652173913043" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/layout/activity_welcome.xml" value="0.18" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/layout/chage_info_dialog.xml" value="0.18" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/layout/change_info_dialog.xml" value="0.1094224924012158" />
+        <entry key="..\:/nam4_hk2/lap trinh di dong/github/LuonVuituoi-Android/app/src/main/res/layout/dialog_email.xml" value="0.1094224924012158" />
       </map>
     </option>
   </component>
