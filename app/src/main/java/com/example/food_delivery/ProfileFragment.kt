@@ -1,5 +1,6 @@
 package com.example.food_delivery
 
+import android.app.Activity
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.food_delivery.databinding.FragmentProfileBinding
@@ -18,24 +18,22 @@ import com.example.food_delivery.databinding.FragmentProfileBinding
 class ProfileFragment : Fragment() {
     lateinit var binding : FragmentProfileBinding
     lateinit var viewModel: profile_view_model
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        //binding = DataBindingUtil.setContentView(this, R.layout.fragment_profile)
-//        binding.user =
-//            User(Data_Store.USER_NAME_KEY, Data_Store.USER_EMAIL_KEY, Data_Store.USER_PHONE_KEY)
-//        viewModel = ViewModelProvider(this).get(profile_view_model::class.java)
-//        binding.editProfile.setOnClickListener { showDialog() }
-////        binding.back.setOnClickListener { finish() }
-////        binding.next.setOnClickListener {
-////            val intent = Intent(this, HomeScreenFragment::class.java)
-////            startActivity(intent)
-////        }
-//    }
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //binding = DataBindingUtil.setContentView(binding.root.context as Activity, R.layout.fragment_profile)
+        binding.user = User(Data_Store.USER_NAME_KEY, Data_Store.USER_EMAIL_KEY, Data_Store.USER_PHONE_KEY)
+        viewModel = ViewModelProvider(this).get(profile_view_model::class.java)
+        binding.editProfile.setOnClickListener { showDialog() }
+        //binding.back.setOnClickListener {}
+        binding.next.setOnClickListener {
+            val intent = Intent(binding.root.context, HomeScreenFragment::class.java)
+            startActivity(intent)
+        }
+    }
 
     private fun showDialog() {
 
-        val layoutDialog = layoutInflater.inflate(R.layout.chage_info_dialog, null)
+        val layoutDialog : View = LayoutInflater.from(binding.root.context).inflate(R.layout.chage_info_dialog, null)
         val textName = layoutDialog.findViewById<EditText>(R.id.dialog_fullname)
         textName.setText(binding.fullNameShow.text.toString())
         val textEmail = layoutDialog.findViewById<EditText>(R.id.dialog_email)
@@ -43,7 +41,7 @@ class ProfileFragment : Fragment() {
         val textPhoneNumber = layoutDialog.findViewById<EditText>(R.id.dialog_phone)
         textPhoneNumber.setText(binding.phoneNumberShow.text.toString())
 
-        val builder = AlertDialog.Builder(requireContext())
+        val builder = androidx.appcompat.app.AlertDialog.Builder(binding.root.context)
             .setView(layoutDialog)
             .setTitle("Change Information")
 
@@ -71,7 +69,7 @@ class ProfileFragment : Fragment() {
     }
     private fun listenerErrorEvent(){
         viewModel.isErrorEvent.observe(viewLifecycleOwner){
-            Toast.makeText(activity,it, Toast.LENGTH_SHORT).show()
+            Toast.makeText(binding.root.context,it, Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -80,10 +78,6 @@ class ProfileFragment : Fragment() {
             savedInstanceState: Bundle?
         ): View? {
             // Inflate the layout for this fragment
-        binding.user =
-            User(Data_Store.USER_NAME_KEY, Data_Store.USER_EMAIL_KEY, Data_Store.USER_PHONE_KEY)
-        viewModel = ViewModelProvider(this).get(profile_view_model::class.java)
-        binding.editProfile.setOnClickListener { showDialog() }
             binding = FragmentProfileBinding.inflate(inflater, container, false)
             return binding.root
         }

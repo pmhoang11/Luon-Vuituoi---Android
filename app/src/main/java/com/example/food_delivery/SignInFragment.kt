@@ -44,11 +44,9 @@ class SignInFragment : Fragment() {
         binding.buttonVeri.setOnClickListener{
             val email=binding.email.text.toString().trim()
             val password=binding.password.text.toString().trim()
+            ViewModel.checkEmailAndPassword(email,password)
             val controller = findNavController()
             controller.navigate(R.id.action_signInFragment_to_homeScreenFragment)
-
-//            ViewModel.checkEmailAndPassword(email,password)
-
         }
         listenerErrorEvent()
         listenerSuccessEvent()
@@ -58,8 +56,7 @@ class SignInFragment : Fragment() {
             if(it){
                 if(check()) {
                     Toast.makeText(activity, "Successful login !", Toast.LENGTH_SHORT).show()
-                    val controller = findNavController()
-                    controller.navigate(R.id.action_signInFragment_to_homeScreenFragment)
+
                 }
                 else {
                     Toast.makeText(activity, "Email and password incorrect !", Toast.LENGTH_SHORT).show()
@@ -76,10 +73,8 @@ class SignInFragment : Fragment() {
         println(email)
         println(password)
         println("-------------------")
-//        val email1 = Data_Store.USER_EMAIL_KEY
-//        val password1 = Data_Store.USER_PASS_KEY
-        val email1 = "abc@q.co"
-        val password1 = "1235678"
+        val email1 = Data_Store.USER_EMAIL_KEY
+        val password1 = Data_Store.USER_PASS_KEY
         println(email1)
         println(password1)
         if (email.equals(email1) && password.equals(password1)) return true
