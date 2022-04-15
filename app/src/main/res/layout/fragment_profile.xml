@@ -94,7 +94,7 @@
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:textStyle="bold"
-                            android:text="@{user.name}"
+                            android:text="@{user.fullname}"
                             android:textSize="20dp">
 
                         </TextView>
@@ -137,7 +137,7 @@
                         android:background="@drawable/border_shadow"
                         android:hint="None"
                         android:inputType="textPersonName"
-                        android:text="@{user.name}"
+                        android:text="@{user.fullname}"
                         android:paddingLeft="16dp"
                         android:paddingTop="12dp"
                         android:textSize="20sp" />
