@@ -13,6 +13,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.food_delivery.databinding.FragmentProfileBinding
 import com.example.food_delivery.databinding.FragmentSignInBinding
 import com.example.food_delivery.databinding.FragmentSignInBindingImpl
@@ -30,9 +31,10 @@ class ProfileFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(profile_view_model::class.java)
         binding.editProfile.setOnClickListener { showDialog() }
         //binding.back.setOnClickListener {}
-        binding.next.setOnClickListener {
-            val intent = Intent(binding.root.context, HomeScreenFragment::class.java)
-            startActivity(intent)
+        binding.btnLogOut.setOnClickListener{
+            val controller = findNavController()
+            controller.navigate(R.id.action_profileFragment_to_welcomFragment)
+            Toast.makeText(activity, "Log out!", Toast.LENGTH_SHORT).show()
         }
     }
 

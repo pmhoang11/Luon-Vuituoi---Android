@@ -93,9 +93,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:textStyle="bold"
                             android:text="@{user.fullname}"
-                            android:textSize="20dp">
+                            android:textSize="20dp"
+                            android:textStyle="bold">
 
                         </TextView>
 
@@ -137,9 +137,9 @@
                         android:background="@drawable/border_shadow"
                         android:hint="None"
                         android:inputType="textPersonName"
-                        android:text="@{user.fullname}"
                         android:paddingLeft="16dp"
                         android:paddingTop="12dp"
+                        android:text="@{user.fullname}"
                         android:textSize="20sp" />
 
 
@@ -157,8 +157,8 @@
                         android:layout_height="60dp"
                         android:background="@drawable/border_shadow"
                         android:paddingLeft="16dp"
-                        android:text="@{user.email}"
                         android:paddingTop="12dp"
+                        android:text="@{user.email}"
                         android:textSize="20sp" />
 
                     <TextView
@@ -175,20 +175,41 @@
                         android:layout_height="60dp"
                         android:background="@drawable/border_shadow"
                         android:hint="None"
-                        android:text="@{user.phone}"
                         android:paddingLeft="16dp"
                         android:paddingTop="25dp"
+                        android:text="@{user.phone}"
                         android:textSize="20sp" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/next"
-                    android:layout_width="67dp"
-                    android:layout_height="67dp"
-                    android:layout_alignParentBottom="true"
+                <LinearLayout
+                    android:id="@+id/btn_log_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:src="@drawable/arrow" />
+                    android:background="@drawable/bg_button"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/next"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_log_out" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="Log Out"
+                        android:textColor="@color/white"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                </LinearLayout>
             </LinearLayout>
 
         </ScrollView>
