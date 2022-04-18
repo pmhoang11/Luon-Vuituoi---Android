@@ -16,6 +16,7 @@ import com.example.food_delivery.databinding.FragmentSignUpBinding
 class SignInFragment : Fragment() {
     lateinit var binding : FragmentSignInBinding
     private lateinit var ViewModel: login_view_model
+    private var check = 1
   //  private lateinit var userManager: Data_Store
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,17 +46,17 @@ class SignInFragment : Fragment() {
             val email = binding.email.text.toString().trim()
             val password = binding.password.text.toString().trim()
             ViewModel.checkEmailAndPassword(email, password)
-            if (check()) {
-
+            if (check() && check == 1) {
                 val controller = findNavController()
                 controller.navigate(R.id.action_signInFragment_to_homeScreenFragment)
+                check = 0;
             } else
             {
                 Toast.makeText(activity, "Email and password incorrect !", Toast.LENGTH_SHORT).show()
             }
         }
-            listenerErrorEvent()
-            listenerSuccessEvent()
+        listenerErrorEvent()
+        listenerSuccessEvent()
     }
     private fun listenerSuccessEvent(){
         ViewModel.isSuccessEvent.observe(viewLifecycleOwner){
