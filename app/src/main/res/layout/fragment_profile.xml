@@ -182,34 +182,13 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/btn_log_out"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/next"
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:layout_alignParentBottom="true"
                     android:layout_gravity="center"
-                    android:background="@drawable/bg_button"
-                    android:orientation="horizontal"
-                    android:padding="10dp">
-
-                    <ImageView
-                        android:id="@+id/next"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_log_out" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:text="Log Out"
-                        android:textColor="@color/white"
-                        android:textStyle="bold">
-
-                    </TextView>
-
-                </LinearLayout>
+                    android:src="@drawable/arrow" />
             </LinearLayout>
 
         </ScrollView>

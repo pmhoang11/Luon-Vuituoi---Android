@@ -44,9 +44,7 @@
         tools:layout="@layout/fragment_on_boarding_three">
         <action
             android:id="@+id/action_onBoardingThreeFragment_to_welcomFragment"
-            app:destination="@id/welcomFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/stay"/>
+            app:destination="@id/welcomFragment" />
     </fragment>
     <fragment
         android:id="@+id/welcomFragment"
@@ -55,14 +53,10 @@
         tools:layout="@layout/fragment_welcom">
         <action
             android:id="@+id/action_welcomFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/stay"/>
+            app:destination="@id/signUpFragment" />
         <action
             android:id="@+id/action_welcomFragment_to_signInFragment"
-            app:destination="@id/signInFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/stay"/>
+            app:destination="@id/signInFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -71,29 +65,19 @@
         tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_signInFragment"
-            app:destination="@id/signInFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/stay"
-            app:popUpTo="@id/signUpFragment"
-            app:popUpToInclusive="true"/>
+            app:destination="@id/signInFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.example.food_delivery.SignInFragment"
         android:label="SignInFragment"
-        tools:layout="@layout/fragment_sign_in">
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signInFragment_to_homeScreenFragment"
-            app:destination="@id/homeScreenFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/stay"
-            app:popUpTo="@id/signInFragment"
-            app:popUpToInclusive="true"/>
+            app:destination="@id/homeScreenFragment" />
         <action
             android:id="@+id/action_signInFragment_to_signUpFragment"
-            app:destination="@id/signUpFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/stay"/>
+            app:destination="@id/signUpFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeScreenFragment"
@@ -102,9 +86,7 @@
         tools:layout="@layout/fragment_home_screen">
         <action
             android:id="@+id/action_homeScreenFragment_to_profileFragment"
-            app:destination="@id/profileFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/stay"/>
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -113,11 +95,10 @@
         tools:layout = "@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_to_welcomFragment"
-            app:destination="@id/welcomFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/stay"
-            app:popUpTo="@id/homeScreenFragment"
-            app:popUpToInclusive="true"/>
+            app:destination="@id/welcomFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment" />
     </fragment>
 
 </navigation>
