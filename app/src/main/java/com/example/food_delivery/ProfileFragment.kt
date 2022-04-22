@@ -36,6 +36,10 @@ class ProfileFragment : Fragment() {
             controller.navigate(R.id.action_profileFragment_to_welcomFragment)
             Toast.makeText(activity, "Log out!", Toast.LENGTH_SHORT).show()
         }
+        binding.back.setOnClickListener {
+            val controller = findNavController()
+            controller.navigate(R.id.action_profileFragment_to_homeScreenFragment)
+        }
     }
 
     private fun showDialog() {

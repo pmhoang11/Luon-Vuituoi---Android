@@ -65,6 +65,7 @@
 
                         <EditText
                             android:id="@+id/name_signup"
+                            android:text="Luon VuiTuoi"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
                             android:inputType="text"
@@ -93,6 +94,7 @@
 
                         <EditText
                             android:id="@+id/email_signup"
+                            android:text="luonvuituoi@gmail.com"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
                             android:inputType="text"
@@ -122,6 +124,7 @@
 
                         <EditText
                             android:id="@+id/password_signup"
+                            android:text="LuonVuiTuoi123@"
                             android:layout_width="match_parent"
                             android:layout_height="60dp"
                             android:background="@drawable/bg_custom"

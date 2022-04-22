@@ -118,6 +118,12 @@
             app:exitAnim="@anim/stay"
             app:popUpTo="@id/homeScreenFragment"
             app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_profileFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stay"/>
     </fragment>
 
 </navigation>
