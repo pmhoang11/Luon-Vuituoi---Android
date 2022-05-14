@@ -10,8 +10,48 @@
         android:label="SplashFragment"
         tools:layout="@layout/fragment_splash">
         <action
+<<<<<<< HEAD
             android:id="@+id/action_splashFragment_to_welcomFragment"
             app:destination="@id/welcomFragment" />
+=======
+            android:id="@+id/action_splashFragment_to_onBoardingOneFragment"
+            app:destination="@id/onBoardingOneFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stay"/>
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingOneFragment"
+        android:name="com.example.food_delivery.OnBoardingOneFragment"
+        android:label="OnBoardingOneFragment"
+        tools:layout="@layout/fragment_on_boarding_one">
+        <action
+            android:id="@+id/action_onBoardingOneFragment_to_onBoardingTwoFragment"
+            app:destination="@id/onBoardingTwoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stay"/>
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingTwoFragment"
+        android:name="com.example.food_delivery.OnBoardingTwoFragment"
+        android:label="OnBoardingTwoFragment"
+        tools:layout="@layout/fragment_on_boarding_two">
+        <action
+            android:id="@+id/action_onBoardingTwoFragment_to_onBoardingThreeFragment"
+            app:destination="@id/onBoardingThreeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stay"/>
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingThreeFragment"
+        android:name="com.example.food_delivery.OnBoardingThreeFragment"
+        android:label="OnBoardingThreeFragment"
+        tools:layout="@layout/fragment_on_boarding_three">
+        <action
+            android:id="@+id/action_onBoardingThreeFragment_to_welcomFragment"
+            app:destination="@id/welcomFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/stay"/>
+>>>>>>> 70a5d96e62c5f9dcad4cc1ce037fc48b3c75a935
     </fragment>
     <fragment
         android:id="@+id/welcomFragment"
