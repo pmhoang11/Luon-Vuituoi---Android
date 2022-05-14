@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -12,22 +13,28 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.food_delivery.databinding.FragmentProfileBinding
+import com.example.food_delivery.databinding.FragmentSignInBinding
+import com.example.food_delivery.databinding.FragmentSignInBindingImpl
 
 
 class ProfileFragment : Fragment() {
-    lateinit var binding : FragmentProfileBinding
-    lateinit var viewModel: profile_view_model
+    private lateinit var binding : FragmentProfileBinding
+   // private lateinit var binding_login : FragmentSignInBinding
+    private lateinit var viewModel: profile_view_model
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+       // binding = DataBindingUtil.setContentView(this, R.layout.activity_profile)
         super.onViewCreated(view, savedInstanceState)
-        //binding = DataBindingUtil.setContentView(binding.root.context as Activity, R.layout.fragment_profile)
-        binding.user = User(Data_Store.USER_NAME_KEY, Data_Store.USER_EMAIL_KEY, Data_Store.USER_PHONE_KEY)
+        //binding.user = User(Pro.fullname,Pro.email,Pro.phone)
+        binding.user = User(DataAccount.listUser.get(0).fullname,DataAccount.listUser.get(0).email,DataAccount.listUser.get(0).phone)
         viewModel = ViewModelProvider(this).get(profile_view_model::class.java)
         binding.editProfile.setOnClickListener { showDialog() }
         //binding.back.setOnClickListener {}
-        binding.next.setOnClickListener {
-            val intent = Intent(binding.root.context, HomeScreenFragment::class.java)
-            startActivity(intent)
+        binding.btnLogOut.setOnClickListener{
+            val controller = findNavController()
+            controller.navigate(R.id.action_profileFragment_to_welcomFragment)
+            Toast.makeText(activity, "Log out!", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -63,16 +70,19 @@ class ProfileFragment : Fragment() {
                 binding.user = User(name, email, phone)
             }
         }
-        Data_Store.USER_EMAIL_KEY = email
-        Data_Store.USER_NAME_KEY = name
-        Data_Store.USER_PHONE_KEY = phone
+//        Data_Store.USER_EMAIL_KEY = email
+//        Data_Store.USER_NAME_KEY = name
+//        Data_Store.USER_PHONE_KEY = phone
     }
     private fun listenerErrorEvent(){
         viewModel.isErrorEvent.observe(viewLifecycleOwner){
             Toast.makeText(binding.root.context,it, Toast.LENGTH_SHORT).show()
         }
     }
-
+//    private fun getUser(){
+//        DataAccount.initSharedPref(requireContext())
+//        viewModel.getUser()
+//    }
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?

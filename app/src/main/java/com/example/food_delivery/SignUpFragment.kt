@@ -23,7 +23,7 @@ import kotlinx.coroutines.launch
 class SignUpFragment : Fragment() {
     lateinit var binding : FragmentSignUpBinding
     private lateinit var ViewModel: signup_view_model
-    private lateinit var userManager: Data_Store
+  //  lateinit var userManager: Data_Store
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -62,6 +62,11 @@ class SignUpFragment : Fragment() {
     private fun listenerSuccessEvent(){
         ViewModel.isSuccessEvent.observe(viewLifecycleOwner){
             if(it){
+                val fullName = binding.nameSignup.text.toString().trim()
+                val email = binding.emailSignup.text.toString().trim()
+                val password = binding.passwordSignup.text.toString().trim()
+                val user = User(fullName, email, password)
+                DataAccount.listUser.add(user)
 //                CoroutineScope(Dispatchers.IO).launch {
 //                    userManager.changedataUser(
 //                        binding.nameSignup.text.toString().trim(),
@@ -69,9 +74,10 @@ class SignUpFragment : Fragment() {
 //                        binding.passwordSignup.text.toString().trim()
 //                    )
 //                }
-                _DataStore(binding.nameSignup.text.toString().trim(),
-                    binding.emailSignup.text.toString().trim(),
-                    binding.passwordSignup.text.toString().trim())
+//                _DataStore(binding.nameSignup.text.toString().trim(),
+//                    binding.emailSignup.text.toString().trim(),
+//                    binding.passwordSignup.text.toString().trim())
+
                 Toast.makeText( activity,"Successful", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
             }

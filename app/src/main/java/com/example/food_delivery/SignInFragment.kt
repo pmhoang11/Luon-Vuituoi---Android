@@ -16,7 +16,8 @@ import com.example.food_delivery.databinding.FragmentSignUpBinding
 class SignInFragment : Fragment() {
     lateinit var binding : FragmentSignInBinding
     private lateinit var ViewModel: login_view_model
-    private lateinit var userManager: Data_Store
+    private var check = 1
+  //  private lateinit var userManager: Data_Store
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -41,12 +42,18 @@ class SignInFragment : Fragment() {
             val controller = findNavController()
             controller.navigate(R.id.action_signInFragment_to_signUpFragment)
         }
-        binding.buttonVeri.setOnClickListener{
-            val email=binding.email.text.toString().trim()
-            val password=binding.password.text.toString().trim()
-            ViewModel.checkEmailAndPassword(email,password)
-            val controller = findNavController()
-            controller.navigate(R.id.action_signInFragment_to_homeScreenFragment)
+        binding.buttonVeri.setOnClickListener {
+            val email = binding.email.text.toString().trim()
+            val password = binding.password.text.toString().trim()
+            ViewModel.checkEmailAndPassword(email, password)
+            if (check() && check == 1) {
+                val controller = findNavController()
+                controller.navigate(R.id.action_signInFragment_to_homeScreenFragment)
+                check = 0;
+            } else
+            {
+                Toast.makeText(activity, "Email and password incorrect !", Toast.LENGTH_SHORT).show()
+            }
         }
         listenerErrorEvent()
         listenerSuccessEvent()
@@ -54,18 +61,15 @@ class SignInFragment : Fragment() {
     private fun listenerSuccessEvent(){
         ViewModel.isSuccessEvent.observe(viewLifecycleOwner){
             if(it){
-                if(check()) {
                     Toast.makeText(activity, "Successful login !", Toast.LENGTH_SHORT).show()
-
                 }
-                else {
-                    Toast.makeText(activity, "Email and password incorrect !", Toast.LENGTH_SHORT).show()
-                }
-
-            }
         }
     }
 
+    private  fun get() : String
+    {
+        return binding.email.text.toString().trim()
+    }
     private fun check(): Boolean {
         val email = binding.email.text.toString().trim()
         val password = binding.password.text.toString().trim()
@@ -73,20 +77,24 @@ class SignInFragment : Fragment() {
         println(email)
         println(password)
         println("-------------------")
-        val email1 = Data_Store.USER_EMAIL_KEY
-        val password1 = Data_Store.USER_PASS_KEY
-        println(email1)
-        println(password1)
-        if (email.equals(email1) && password.equals(password1)) return true
+        for (user in DataAccount.listUser){
+            if(email.equals(user.email) && password.equals(user.password)){
+               // val user1 : User
+
+                return true
+            }
+        }
         return false
     }
-
     private fun listenerErrorEvent(){
         ViewModel.isErrorEvent.observe(viewLifecycleOwner){
             Toast.makeText(activity,it, Toast.LENGTH_SHORT).show()
         }
     }
-
-
-
+//    companion object Factory {
+//        fun getMoreInfo():String
+//        {
+//
+//        }
+//    }
 }

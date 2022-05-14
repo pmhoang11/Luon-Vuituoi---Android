@@ -30,18 +30,11 @@ class WelcomFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonSkip.setOnClickListener {
+        binding.getStarted.setOnClickListener {
             var controler = findNavController()
             controler.navigate(R.id.action_welcomFragment_to_signUpFragment)
         }
-        binding.buttonLogin3.setOnClickListener {
-            var controler = findNavController()
-            controler.navigate(R.id.action_welcomFragment_to_signUpFragment)
-        }
-        binding.buttonSignin.setOnClickListener {
-            var controler = findNavController()
-            controler.navigate(R.id.action_welcomFragment_to_signInFragment)
-        }
+
     }
 
 }

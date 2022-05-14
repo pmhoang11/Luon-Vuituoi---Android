@@ -1,24 +1,20 @@
 package com.example.food_delivery
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.food_delivery.R
 import com.example.food_delivery.databinding.FragmentHomeScreenBinding
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 
 class HomeScreenFragment : Fragment() {
     lateinit var binding : FragmentHomeScreenBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,9 +31,13 @@ class HomeScreenFragment : Fragment() {
             val controller = findNavController()
             controller.navigate(R.id.action_homeScreenFragment_to_profileFragment)
            // binding = DataBindingUtil.setContentView(binding.root.context, R.layout.activity_restaurant_list)
-
-            //binding.back.setOnClickListener { finish()
-            }
+        }
+        binding.back.setOnClickListener {
+//            val fm: FragmentManager = requireActivity().supportFragmentManager
+//            for (i in 0 until fm.backStackEntryCount) {
+//                fm.popBackStack()
+//            }
+        }
         val data = DataStore.getDataSet()
         val adapter = RestaurantAdapter(data)
         val lm = LinearLayoutManager(binding.root.context)

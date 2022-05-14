@@ -39,7 +39,7 @@ class SplashFragment : Fragment() {
         binding.luonvuituoiText.startAnimation(bottomAnimation)
         Handler().postDelayed({
             var controler = findNavController()
-            controler.navigate(R.id.action_splashFragment_to_onBoardingOneFragment)
+            controler.navigate(R.id.action_splashFragment_to_welcomFragment)
         }, 2000) // 2secs
     }
 }
